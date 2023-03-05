@@ -1,0 +1,48 @@
+---
+import { Icon } from "astro-icon";
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+import Button from "@components/ui/button.astro";
+import Contactform from "@components/contactform.astro";
+---
+
+<Layout title="Contact">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">Contactos</Fragment>
+      <Fragment slot="desc">Nosotros les solucionamos sus dudas</Fragment>
+    </Sectionhead>
+
+    <div class="grid md:grid-cols-2 gap-10 mx-auto max-w-4xl mt-16">
+      <div>
+        <h2 class="font-medium text-2xl text-gray-800">
+          Contacto con <span class="font-bold text-slate-800">UG</span><spam
+            class="font-medium text-slate-500">Code</spam
+          >
+        </h2>
+        <p class="text-lg leading-relaxed text-slate-500 mt-3">
+          Tiene alguna pregunta? No dude en contactarnos, estaremos encantados
+          de ayudarle.
+        </p>
+        <div class="mt-5">
+          <div class="flex items-center mt-2 space-x-2 text-gray-600">
+            <Icon class="text-gray-400 w-4 h-4" name="uil:map-marker" />
+            <span>Universidad de Guayaquil, Boyaca</span>
+          </div><div class="flex items-center mt-2 space-x-2 text-gray-600">
+            <Icon class="text-gray-400 w-4 h-4" name="uil:envelope" /><a
+              href="mailto:pablopincayaa@ug.edu.ec">pablopincayaa@ug.edu.ec</a
+            >
+          </div><div class="flex items-center mt-2 space-x-2 text-gray-600">
+            <Icon class="text-gray-400 w-4 h-4" name="uil:phone" /><a
+              href="tel:+593 (09) 4587 2991">+593 (09) 4587 2991</a
+            >
+          </div>
+        </div>
+      </div>
+      <div>
+        <Contactform />
+      </div>
+    </div>
+  </Container>
+</Layout>

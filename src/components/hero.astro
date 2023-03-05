@@ -1,0 +1,57 @@
+---
+import { Picture } from "@astrojs/image/components";
+import heroImage from "assets/BestGirlProgramming.png";
+import Link from "@components/ui/link.astro";
+import { Icon } from "astro-icon";
+---
+
+<main
+  class="grid lg:grid-cols-2 place-items-center pt-16 py-9 md:pt-20 md:pb-24">
+  <div class="py-6 md:order-1 hidden md:block">
+    <Picture
+      src={heroImage}
+      alt="Girl with a MacBook Pro"
+      widths={[200, 400, 600, 900]}
+      aspectRatio="4:3"
+      sizes="(max-width: 860px) 100vw, 780px"
+      loading="eager"
+      format="avif"
+    />
+  </div>
+  <div class="space-y-5">
+    <h1
+      class="text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-normal xl:tracking-tight">
+      Aprende Practica Esfuerzate usa <span class="font-bold text-slate-800"
+        >UG</span
+      ><spam class="font-medium text-slate-500">Code</spam>
+    </h1>
+    <p
+      class="text-lg mt-4 text-slate-600 max-w-xl py-2 tracking-wide leading-9">
+      UGCode un lugar en donde pondras a prueba tus conocimientos de
+      programacion.<wbr /> Mejoraras tus habilidades superando desafios de codigo/algoritmia
+      clasificados por temas y dificultad.
+    </p>
+    <div class="mt-6 flex flex-col sm:flex-row gap-3">
+      <Link
+        href="#"
+        href="https://web3templates.com/templates/astroship-starter-website-template-for-astro"
+        target="_blank"
+        class="flex gap-1 items-center justify-center"
+        rel="noopener">
+        <Icon class="text-white w-5 h-5" name="bx:bxs-cloud-download" />
+
+        Download Instrucciones
+      </Link>
+      <Link
+        size="lg"
+        style="outline"
+        rel="noopener"
+        href="https://github.com/surjithctly/astroship"
+        class="flex gap-1 items-center justify-center"
+        target="_blank">
+        <Icon class="text-black w-4 h-4" name="bx:bxl-github" />
+        GitHub Repo
+      </Link>
+    </div>
+  </div>
+</main>
