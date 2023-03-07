@@ -1,37 +1,169 @@
 ---
 draft: false
-title: " Introduction to the Essential Data Structures & Algorithms"
-snippet: "Ornare cum cursus laoreet sagittis nunc fusce posuere per euismod dis vehicula a, semper fames lacus maecenas dictumst pulvinar neque enim non potenti. Torquent hac sociosqu eleifend potenti."
+title: " Introducción a las Estructuras de Datos y Algoritmos Esenciales"
+snippet: "Este artículo intenta enumerar las estructuras de datos integradas disponibles en JavaScript y las propiedades que tienen."
 image: {
-    src: "https://images.unsplash.com/photo-1627163439134-7a8c47e08208?&fit=crop&w=430&h=240",
+    src: "https://w10.naukri.com/mailers/2022/naukri-learning/what-is/What-is-Data-Structures-and-Algorithms.jpg",
     alt: "data structures & algorithms"
 }
-publishDate: "2022-11-09 16:39"
+publishDate: "2023-01-09 16:39"
 category: "Courses"
-author: "Marcell Ziemann"
-tags: [webdev, tailwindcss, frontend]
+author: "Pablo Pincay Alvarez"
+tags: [webdev, javascript, data structures, algorithms]
 ---
 
-Lorem ipsum dolor sit amet consectetur adipiscing elit euismod rutrum, consequat fringilla ultricies nullam curae mollis semper conubia viverra, orci aenean dapibus pharetra nec tortor tellus cubilia. Ullamcorper mi lectus eu malesuada tempor massa praesent magna mattis posuere, lobortis vulputate ut duis magnis parturient habitant nibh id tristique, quis suspendisse donec nisl penatibus sem non feugiat taciti. Mollis per ridiculus integer cursus semper vestibulum fermentum penatibus cubilia blandit scelerisque, tempus platea leo posuere ac pharetra volutpat aliquet euismod id ullamcorper lobortis, urna est magna mus rhoncus massa curae libero praesent eget. Mattis malesuada vestibulum quis ac nam phasellus suscipit facilisis libero diam posuere, cursus massa vehicula neque imperdiet tincidunt dui egestas lacinia mollis aliquet orci, nisl curabitur dapibus litora dis cum nostra montes ligula praesent. Facilisi aliquam convallis molestie tempor blandit ultricies bibendum parturient cubilia quam, porttitor morbi torquent tempus taciti nec faucibus elementum phasellus, quis inceptos vestibulum gravida augue potenti eget nunc maecenas. Tempor facilisis ligula volutpat habitant consequat inceptos orci per potenti blandit platea, mus sapien eget vel libero vestibulum augue cubilia ut ultrices fringilla lectus, imperdiet pellentesque cum ridiculus convallis sollicitudin nisl interdum semper felis.
+Una estructura de datos es una forma que tenemos de guardar elementos en el ordenador, de tal forma que podemos acceder, crear y eliminar datos de una forma eficiente dependiendo de cada caso. Por ejemplo una lista es una estructura de datos, y una cola también.
 
-Ornare cum cursus laoreet sagittis nunc fusce posuere per euismod dis vehicula a, semper fames lacus maecenas dictumst pulvinar neque enim non potenti. Torquent hac sociosqu eleifend potenti augue nulla vivamus senectus odio, quisque curabitur enim consequat class sociis feugiat ullamcorper, felis dis imperdiet cubilia commodo sed massa phasellus. Viverra purus mus nisi condimentum dui vehicula facilisis turpis, habitant nascetur lectus tempor quisque habitasse urna scelerisque, nibh nullam vestibulum luctus aenean mollis metus. Suscipit gravida duis nec aliquet natoque molestie a ridiculus scelerisque cum, justo cursus sapien sodales purus dignissim vel facilisi magnis, inceptos rutrum ut integer auctor commodo sollicitudin fames et. Faucibus ligula nibh sagittis mauris auctor posuere habitant, scelerisque phasellus accumsan egestas gravida viverra nam, sed etiam eleifend proin massa dictumst. Porttitor risus luctus per aenean tellus primis fringilla vitae fames lacinia mauris metus, nec pulvinar quisque commodo sodales ac nibh natoque phasellus semper placerat. Lectus aenean potenti leo sollicitudin tristique eros quam ligula, vestibulum diam consequat enim torquent nec tempus, blandit viverra dapibus eleifend dis nunc nascetur.
+Normalmente cuando se explican las estructura de datos, se usa un lenguaje con punteros como C o Java para sus implementaciones, ya que es la manera más eficiente que existe.
 
-## Sodales hendrerit malesuada et vestibulum
+Para este caso, voy a explicar las estructuras en Javascript, que, aunque no tiene punteros, nos sirve para saber cómo se crean sus implementaciones.
 
-- Luctus euismod pretium nisi et, est dui enim.
+Vamos con las implementaciones de algunas estructuras básicas.
 
-- Curae eget inceptos malesuada, fermentum class.
+### Listas enlazadas
 
-- Porttitor vestibulum aliquam porta feugiat velit, potenti eu placerat.
+Una lista enlazada, es una tipo de lista de elementos en los que cada elemento tiene almacenado la dirección del siguiente elemento de la lista, de tal forma que si queremos acceder a un elemento en particular tenemos que empezar por el primer elemento para recorrer uno a uno hasta llegar al item deseado.
 
-- Ligula lacus tempus ac porta, vel litora.
+![linked list](https://i.imgur.com/upOnAAj.png)
 
-Torquent non nisi lacinia faucibus nibh tortor taciti commodo porttitor, mus hendrerit id leo scelerisque mollis habitasse orci tristique aptent, lacus at molestie cubilia facilisis porta accumsan condimentum. Metus lacus suscipit porttitor integer facilisi torquent, nostra nulla platea at natoque varius venenatis, id quam pharetra aliquam leo. Dictum orci himenaeos quam mi fusce lacinia maecenas ac magna eleifend laoreet, vivamus enim curabitur ullamcorper est ultrices convallis suscipit nascetur. Ornare fames pretium ante ac eget nisi tellus vivamus, convallis mauris sapien imperdiet sollicitudin aliquet taciti quam, lacinia tempor primis magna iaculis at eu. Est facilisi proin risus eleifend orci torquent ultricies platea, quisque nullam vel porttitor euismod sociis non, maecenas sociosqu interdum arcu sed pharetra potenti. Aliquet risus tempus hendrerit sapien tellus eget cursus enim etiam dui, lobortis nostra pellentesque odio posuere morbi ad neque senectus arcu eu, turpis proin ac felis purus fames magnis dis dignissim.
+#### Características
 
-Orci volutpat augue viverra scelerisque dictumst ut condimentum vivamus, accumsan cum sem sollicitudin aliquet vehicula porta pretium placerat, malesuada euismod primis cubilia rutrum tempus parturient. Urna mauris in nibh morbi hendrerit vulputate condimentum, iaculis consequat porttitor dui dis euismod eros, arcu elementum venenatis varius lectus nisi. Nibh arcu ultrices semper morbi quam aptent quisque porta posuere iaculis, vestibulum cum vitae primis varius natoque conubia eu. Placerat sociis sagittis sociosqu morbi purus lobortis convallis, bibendum tortor ridiculus orci habitasse viverra dictum, quis rutrum fusce potenti volutpat vehicula. Curae porta inceptos lectus mus urna litora semper aliquam libero rutrum sem dui maecenas ligula quis, eget risus non imperdiet cum morbi magnis suspendisse etiam augue porttitor placerat facilisi hendrerit. Et eleifend eget augue duis fringilla sagittis erat est habitasse commodo tristique quisque pretium, suspendisse imperdiet inceptos mollis blandit magna mus elementum molestie sed vestibulum. Euismod morbi hendrerit suscipit felis ornare libero ligula, mus tortor urna interdum blandit nisi netus posuere, purus fermentum magnis nam primis nulla.
+Insertar nodos por el inicio de la lista es inmediato
+Buscar un elemento en la lista tiene complejidad 0(n)
+Puede servir de base para implementar pilas y colas
+Borrar el primer elemento de la lista también es inmediato
+Si la lista no guarda el úlitmo elemento, insertar elementos por el final de la lista tiene complejidad O(n)
 
-## Elementum nisi urna cursus nisl quam ante tristique blandit ultricies eget
+Empecemos por algo sencillo, una lista enlazada con una variable que nos diga qué nodo es el primer nodo de la lista. Con esto es suficiente para la lista porque teniendo el primer nodo si quieres recorrer la lista tan solo tienes que ir pasando de elemento en elemento accediendo a su valor next.
 
-Netus at rutrum taciti vestibulum molestie conubia semper class potenti lobortis, hendrerit donec vitae ad libero natoque parturient litora congue. Torquent rhoncus odio cursus iaculis molestie arcu leo condimentum accumsan, laoreet congue duis libero justo tortor commodo fusce, massa eros hac euismod netus sodales mi magnis. Aenean nullam sollicitudin ad velit nulla venenatis suspendisse iaculis, aliquet senectus mollis aptent fringilla volutpat nascetur, nec urna vehicula lacinia neque augue orci. Suspendisse et eleifend convallis sollicitudin posuere diam turpis gravida congue ultrices, laoreet ultricies dapibus proin facilisis magna class praesent fusce. Mus morbi magnis ultricies sed turpis ultrices tempus tortor bibendum, netus nulla viverra torquent malesuada ridiculus tempor. Parturient sociosqu erat ullamcorper gravida natoque varius, etiam habitant augue praesent per curabitur iaculis, donec pellentesque cursus suscipit aliquet. Congue curae cursus scelerisque pellentesque quis fusce arcu eros dictumst luctus ridiculus nisl viverra, turpis class faucibus phasellus feugiat eleifend fringilla orci tristique habitasse conubia quam. Habitasse montes congue sodales rutrum cras torquent cursus auctor condimentum imperdiet egestas nascetur, platea tincidunt ut sollicitudin purus libero lobortis ad nisi diam quam.
+```javascript
+class LinkedListItem {
+  constructor(value, next) {
+    this.value = value;
+    this.next = next;  
+  }
+}
 
-Suspendisse et eleifend convallis sollicitudin posuere diam turpis gravida congue ultrices, laoreet ultricies dapibus proin facilisis magna class praesent fusce. Mus morbi magnis ultricies sed turpis ultrices tempus tortor bibendum, netus nulla viverra torquent malesuada ridiculus tempor. Parturient sociosqu erat ullamcorper gravida natoque varius, etiam habitant augue praesent per curabitur iaculis, donec pellentesque cursus suscipit aliquet. Congue curae cursus scelerisque pellentesque quis fusce arcu eros dictumst luctus ridiculus nisl viverra, turpis class faucibus phasellus feugiat eleifend fringilla orci tristique habitasse conubia quam. Habitasse montes congue sodales rutrum cras torquent cursus auctor condimentum imperdiet egestas nascetur.
+class LinkedList {
+  constructor() {
+    this.head = null;
+  }
+  prepend(value) {
+    const newItem = new LinkedListItem(value, this.head);
+    this.head = newItem;
+  }
+}
+
+```
+
+Lo primero que hago es crear la clase LinkedListItem que será cada uno de los elementos de la lista que estamos creando. Dentro de esta clase, en el constructor, se define el propio valor que guardará cada elemento de la lista y un valor llamado next para acceder al siguiente valor.
+
+Luego creo la clase LinkedList propiamente dicha, que simplemente guardará el primer item de la lista. También creo la función prepend ya que en este tipo de listas lo mejor es insertar nodos por la cabecera de la lista ya que es lo más óptimo.
+
+La función prepend lo que hace es recibir el valor a guardar y con ese valor se crea un elemento de la clase LinkedListItem que hemos creado antes pasando el value y el elemento head que esté guardado en ese momento. Como insertamos por el principio de la lista, la idea es que el nuevo elemento que se crea tenga como valor next el primer nodo de la lista. Por último se hace que ahora el valor head pase a valer el nodo que hemos creado, así actualizamos el primer nodo de la lista.
+
+Pasemos ahora a la función find que buscará y devolverá el item de la lista con un valor dado.
+
+```javascript
+find(value) {
+  if (!this.head) {
+    return null;
+  }
+  let currentNode = this.head;
+  while (currentNode) {
+    if (currentNode.value === value) {
+      return currentNode;
+    }
+    currentNode = currentNode.next;
+  }
+}
+```
+
+Esta función lo primero que hace es comprobar si la lista es vacía, es decir, si no existe el primer elemento de la lista, el elemento head, en ese caso se devuelve null.
+
+Luego se hace un loop while para recorrer la lista, para ello se selecciona el primer elemento de la lista, se mira si su valor es el que estamos buscando para devolverlo en ese caso y si no es el que buscamos pasamos al siguiente elemento cambiando currentNode por el elemento next que esté apuntando.
+
+Para estos ejemplos estamos buscando los elementos dentro de la lista por su valor, lo suyo sería tener un parámetro id para hacer las búsquedas y que el parámetro value sea un objeto con el valor que quieres guardar.
+
+También podemos crear una función deleteHead para borrar elementos por la cabecera, ya que es lo más óptimo en este tipo de listas.
+
+```javascript
+deleteHead() {
+  if (this.head) {
+    if (this.head.next) {
+      const secondNode = this.head.next;
+      this.head = secondNode;
+    } else {
+      this.head = null;
+   }
+  }
+}
+
+```
+
+Lo primero es comprobar si la lista no tiene cabecera y por tanto está vacía, en ese caso no hacemos nada. Si la lista tiene items lo primero es ver si la cabecera tiene un parámetro next con valor, es decir, para ver si la lista tiene más de dos items. Si es ese caso entonces accedemos a ese segundo item para que sea la nueva cabecera. Si la lista solo tiene un item en ese caso hacemos que la cabecera valga null para que sea una lista vacía.
+
+El código completo quedaría así:
+
+```javascript
+class LinkedListItem {
+  constructor(value, next) {
+    this.value = value;
+    this.next = next;
+  }
+}
+
+class LinkedList {
+  constructor() {
+    this.head = null;
+  }
+  prepend(value) {
+    const newItem = new LinkedListItem(value, this.head);
+    this.head = newItem;
+  }
+  find(value) {
+    if (!this.head) {
+      return null;
+    }
+    let currentNode = this.head;
+    while (currentNode) {
+      if (currentNode.value === value) {
+        return currentNode;
+      }
+      currentNode = currentNode.next;
+    }
+  }
+  deleteHead() {
+    if (this.head) {
+      if (this.head.next) {
+        const secondNode = this.head.next;
+        this.head = secondNode;
+      } else {
+        this.head = null;
+      }
+    }
+  }
+  print() {
+    let currentNode = this.head;
+    while (currentNode) {
+      console.log(currentNode.value);
+      currentNode = currentNode.next;
+    }
+  }
+}
+
+```
+
+También me he metido un método llamado print para poder imprimir por consola todos los elementos de la lista.
+
+Y para usar la lista sería así:
+
+```javascript
+list = new LinkedList();
+list.prepend("a");
+list.prepend("b");
+list.prepend("c");
+console.log(list.find("b"));
+list.print();
+
+```

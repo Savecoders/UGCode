@@ -1,0 +1,78 @@
+---
+import { getCollection } from "astro:content";
+import { Picture } from "@astrojs/image/components";
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+
+// Filter blog entries with 'draft: false' & date before current date
+const publishedChallengeEntries = await getCollection(
+  "challenge",
+  ({ data }) => {
+    return !data.draft && data.publishDate < new Date();
+  }
+);
+
+// Sort content entries by publication date
+/* publishedChallengeEntries.sort(function (a, b) {
+  return b.data.publishDate.valueOf() - a.data.publishDate.valueOf();
+}); 
+*/
+---
+
+<Layout title="challenge">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">Ejercicios de Algoritmia</Fragment>
+      <Fragment slot="desc">
+        Practica tus habilidades de programación con estos desafíos.
+      </Fragment>
+    </Sectionhead>
+    <main class="mt-16">
+      <ul class="grid gap-16 max-w-5xl mx-auto">
+        {
+          publishedChallengeEntries.map((challangePostEntry, index) => (
+            <li class="mx-8 border-2 rounded-lg border-slate-200 py-10 p-6">
+              <a href={`/challenge/${challangePostEntry.slug}`}>
+                <div class="grid md:grid-cols-3 gap-6 md:gap-16 items-center">
+                  <section class="space-y-2">
+                    <span class=" text-blue-400 uppercase tracking-wider text-sm font-medium">
+                      {challangePostEntry.data.topic}
+                    </span>
+                    <p class=" text-gray-800  tracking-wider text-base font-medium">
+                      {challangePostEntry.data.author}
+                    </p>
+                    <p class="py-2 md:mr-12 my-2 px-3 flex justify-center bg-emerald-400 rounded-lg">
+                      {challangePostEntry.data.difficulty}
+                    </p>
+                  </section>
+
+                  <section>
+                    <h3 class="text-2xl font-semibold leading-snug tracking-tight my-2 ">
+                      {challangePostEntry.data.title}
+                    </h3>
+                    <p class=" text-gray-500  tracking-wider text-base font-medium">
+                      {challangePostEntry.data.description}
+                    </p>
+                  </section>
+
+                  <Picture
+                    src={challangePostEntry.data.image.src}
+                    alt={challangePostEntry.data.image.alt}
+                    sizes="(max-width: 240px) 100vw, 240px"
+                    widths={[200, 400, 600, 800]}
+                    aspectRatio="16:9"
+                    background="#ffffff"
+                    fit="cover"
+                    position="center"
+                    class="rounded-md"
+                  />
+                </div>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </main>
+  </Container>
+</Layout>
