@@ -32,9 +32,9 @@ const publishedChallengeEntries = await getCollection(
       <ul class="grid gap-16 max-w-5xl mx-auto">
         {
           publishedChallengeEntries.map((challangePostEntry, index) => (
-            <li class="mx-8 border-2 rounded-lg border-slate-200 py-10 p-6">
+            <li class="mx-8 gap-x-2  border-2 rounded-lg border-slate-100 py-10 p-6 hover:bg-slate-100">
               <a href={`/challenge/${challangePostEntry.slug}`}>
-                <div class="grid md:grid-cols-3 gap-6 md:gap-16 items-center">
+                <div class="grid md:grid-cols-3 gap-6 md:gap-y-20 md:gap-12 items-center">
                   <section class="space-y-2">
                     <span class=" text-blue-400 uppercase tracking-wider text-sm font-medium">
                       {challangePostEntry.data.topic}

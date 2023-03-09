@@ -1,19 +1,20 @@
 ---
 import { Picture } from "@astrojs/image/components";
-import heroImage from "assets/BestGirlProgramming.png";
+import heroImage from "assets/CodeIlustrations.png";
 import Link from "@components/ui/link.astro";
 import { Icon } from "astro-icon";
 ---
 
 <main
   class="grid lg:grid-cols-2 place-items-center pt-16 py-9 md:pt-20 md:pb-24">
-  <div class="py-6 md:order-1 hidden md:block">
+  <div class="px-8 py-6 md:order-1 hidden md:block">
     <Picture
       src={heroImage}
       alt="Girl with a MacBook Pro"
       widths={[200, 400, 600, 900]}
-      aspectRatio="4:3"
-      sizes="(max-width: 860px) 100vw, 780px"
+      height={680}
+      aspectRatio="5:4"
+      sizes="(max-width: 740px) 100vw, 740px"
       loading="eager"
       format="avif"
     />
