@@ -1,7 +1,7 @@
 ---
 import { Icon } from "astro-icon";
 import { Picture } from "@astrojs/image/components";
-import ilustracion from "@assets/Ilustration.png";
+import ilustracion from "@assets/MinitaRezise.png";
 interface Item {
   title: string;
   description?: string;
@@ -23,15 +23,17 @@ const {
 
 <section
   class="grid lg:grid-cols-2 gap-8 place-items-center md:pt-20 md:pb-20 max-w-7xl">
-  <div class="px-4 py-6 md:order-0 hidden md:block">
+  <div class="inset-0 object-cover xl:order-0 hidden md:block">
     <Picture
       widths={[400, 768]}
-      sizes="(max-width: 768px) 100vw, 400px"
-      aspectRatio="400:768"
-      width={400}
-      height={824}
+      sizes="(max-width: 768px) 100vw, 768px"
+      aspectRatio="420:768"
+      width={455}
+      height={771}
       src={ilustracion}
       alt="Ilustración"
+      loading="eager"
+      format="avif"
     />
   </div>
   <div class="md:py-4 md:pr-16 mb-4 md:mb-0">
@@ -55,7 +57,7 @@ const {
                     {icon && (
                       <Icon
                         name={icon}
-                        class="w-6 h-6 text-primary dark:text-slate-400"
+                        class="w-6 h-6 text-primary text-slate-400"
                       />
                     )}
                   </div>

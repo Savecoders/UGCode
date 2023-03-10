@@ -13,12 +13,12 @@ export default function getStepsData() {
         title: 'Paso #2: <span class="font-medium">Ejercicios / Challenge</em>',
         description:
           "Una vez que se haya logueado, iniciado sesión se le redireccionara a la sesión de Challenge, donde se le mostraran los ejercicios disponibles para practicar.",
-        icon: "tabler:user",
+        icon: "tabler:package",
       },
       {
         title: 'Paso #3: <span class="font-medium">Practicar</span>',
         description:
-          "Segun el listadod de los ejercicios, debera seleccionar el que desee practicar, una vez seleccionado, se le mostrara el ejercicio, las instrucciones y ejemplos del codigo que debera realizar para poder resolverlo.",
+          "Segun el listado de los ejercicios, debera seleccionar el que desee practicar, una vez seleccionado, se le mostrara el ejercicio, las instrucciones y ejemplos del codigo que debera realizar para poder resolverlo.",
         icon: "tabler:paint",
       },
       {
